@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333
+}
+
+.centrar{
+    text-align: center;
+}
+
+.margen{
+    padding: 15px;
+}
+
+.ancho{
+    width: 1200px;
+    margin: auto;
+    /* border: 1px red solid; */
+}
+
+.etiquetas{
+    width: 30%;
+    display: inline-block;
+    /* border: 1px blue solid; */
+    vertical-align: top;
+}
+
+.contenedor_llenado{
+    width: 68%;
+    display: inline-block;
+    margin-left: 10px;
+    /* border: 1px blue solid; */
+}
+
+form{
+    background-color: #f0f0f0f0;
+}
+
+form label{
+    text-align: right;
+    display: block;
+    margin-bottom: 35px;
+}
+
+form input{
+    display: block;
+    width: 70%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+form input:focus{
+    background-color: #e1f3f7;
+}
+
+button{
+    width: 70%;
+    display: block;
+    color: white;
+    background-color: #800000;
+    height: 40px;
+    border: none;
+}
+
+textarea{
+    width: 70%;
+    height: 200px;
+}
+
+textarea:focus{
+    background-color: #e1f3f7;
+}
+
+span{
+    color: #800000;
+}

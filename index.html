@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+<body>
+    <h1 class="ancho centrar margen" >Formulario - Contactanos</h1>
+    <form class="ancho margen" action="get" id="formulario_comentarios" >
+        <div class="etiquetas">
+            <label for="nombre"><span>*</span>Nombre: </label>
+            <label for="email">Email: </label>
+            <label for="telefono">Telefono: </label>
+            <label for="date"><span>*</span>Fecha: </label>
+            <label for="comentario"><span>*</span>Comentarios: </label>
+        </div>
+        <div class="contenedor_llenado">
+            <input required type="text" name="nombre" id="nombre">
+            <input type="email" name="email" id="email">
+            <input type="tel" placeholder="ejem:9991234567" name="telefono" id="telefono">
+            <input required type="date" name="date" id="date">
+            <textarea required name="" name="comentario" id="comentario"></textarea>
+            <button id="btn_validar" class="btn" type="button">Enviar comentarios</button>
+        </div>
+    </form>
+
+    <script>
+        $("#btn_validar").click(function(){
+            //validar nombre
+            if($("#nombre").val().trim() == ''){
+                alert("Escribe tu nombre");
+                $("#nombre").focus()
+                return 0;
+            }
+            //validar fecha
+            if($("#date").val().trim() == ''){
+                alert("Ingresa una fecha");
+                $("#date").focus()
+                return 0;
+            }
+            //validar comentario
+            if($("#comentario").val().trim() == ''){
+                alert("Escribe comentario");
+                $("#comentario").focus()
+                return 0;
+            }
+
+            $("#formulario_comentarios").submit();
+        });
+    </script>
+</body>
+</html>
